@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: '12.x'
 
-      - name: install @angular/cli && npm install && ng build
+      - name: install @angular/cli && npm install && ng build && cd dist
         run: |
           sudo npm install -g @angular/cli
           npm install
