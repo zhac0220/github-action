@@ -26,3 +26,16 @@ jobs:
           sudo npm install -g @angular/cli
           npm install
           ng build --prod
+          pwd
+          ls
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: afk
+          path: dist/afk-chrome-extension/
+
+
+      - name: cd dist
+        run: |
+          cd dist/afk-chrome-extension
+          pwd
