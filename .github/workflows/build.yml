@@ -15,8 +15,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        
-      - name: ls -alF
+
+      - name: Node 12.x
+        uses: actions/setup-node@v2.1.5
+        with:
+          node-version: '12.x'
+
+      - name: install @angular/cli && npm install && ng build
         run: |
-          ls -alF
-          pwd
+          sudo npm install -g @angular/cli
+          npm install
+          ng build --prod
