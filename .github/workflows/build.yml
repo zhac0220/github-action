@@ -34,7 +34,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: afk
-          path: dist/afk-chrome-extension/
+          path: dist/github-action/
 
       # - name: cd dist
       #   run: |
